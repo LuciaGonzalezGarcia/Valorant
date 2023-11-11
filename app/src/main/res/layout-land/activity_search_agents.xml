@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/valorant"
+    tools:context=".searchAgents.SearchAgentsActivity">
+
+    <TextView
+        android:id="@+id/valorantTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="VALORANT"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searchAgentButtonID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#020202"
+        android:onClick="onSearchAgentButtonPressed"
+        android:text="SEARCH"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerAgentsID"
+        app:layout_constraintStart_toEndOf="@+id/spinnerAgentsID"
+        app:layout_constraintTop_toTopOf="@+id/spinnerAgentsID"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/searchRolsID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#020202"
+        android:onClick="onSearchRolButtonPressed"
+        android:text="SEARCH"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerRolsID"
+        app:layout_constraintStart_toEndOf="@+id/spinnerRolsID"
+        app:layout_constraintTop_toTopOf="@+id/spinnerRolsID"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/searchTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="AGENTS"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerRolsID"
+        android:layout_width="186dp"
+        android:layout_height="48dp"
+
+        android:layout_marginTop="10dp"
+        android:background="#73DAD0D0"
+        android:contentDescription="Rols"
+        app:layout_constraintStart_toStartOf="@+id/rolsTextID"
+        app:layout_constraintTop_toBottomOf="@+id/rolsTextID" />
+
+    <Spinner
+        android:id="@+id/spinnerAgentsID"
+        android:layout_width="186dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+
+        android:background="#73DAD0D0"
+        android:contentDescription="Rols"
+        app:layout_constraintStart_toStartOf="@+id/agentsTextID"
+        app:layout_constraintTop_toBottomOf="@+id/agentsTextID" />
+
+    <TextView
+        android:id="@+id/agentsTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="#73000000"
+        android:text="Agents:"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valorantTextID" />
+
+    <TextView
+        android:id="@+id/rolsTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#73000000"
+        android:text="Rols:"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/agentsTextID"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerAgentsID" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="229dp"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/searchRolsID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchAgentButtonID"
+        app:layout_constraintTop_toTopOf="@+id/searchAgentButtonID">
+
+        <RadioButton
+            android:id="@+id/LocalButtonID"
+            android:layout_width="119dp"
+            android:layout_height="match_parent"
+            android:background="#99000000"
+            android:onClick="setLocalSearch"
+            android:text="Local"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/inetButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000"
+            android:checked="true"
+            android:onClick="setInetSearch"
+            android:text="Inet"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/arrowRightID"
+        android:layout_width="81dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="10dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="Click to change"
+        android:onClick="onArrowButtonPressed"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toBottomOf="@+id/searchTextID"
+        app:layout_constraintStart_toEndOf="@+id/searchTextID"
+        app:layout_constraintTop_toTopOf="@+id/searchTextID"
+        app:srcCompat="@drawable/arrowbutton" />
+
+    <ImageButton
+        android:id="@+id/arrowLeftID"
+        android:layout_width="81dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="10dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="Click to change"
+        android:onClick="onArrowButtonPressed"
+        android:rotationY="-180"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toBottomOf="@+id/searchTextID"
+        app:layout_constraintEnd_toStartOf="@+id/searchTextID"
+        app:layout_constraintTop_toTopOf="@+id/searchTextID"
+        app:srcCompat="@drawable/arrowbutton" />
+
+    <ProgressBar
+        android:id="@+id/progressBarAgentsID"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

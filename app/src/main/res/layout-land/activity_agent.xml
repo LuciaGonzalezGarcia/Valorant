@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/valorantimage"
+    tools:context=".agent.AgentActivity">
+
+    <TextView
+        android:id="@+id/nameAgentID"
+        android:layout_width="122dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:background="#7CFFFEFE"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/agentImageID"
+        android:layout_width="137dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="20dp"
+        android:background="#7CFFFEFE"
+        app:layout_constraintStart_toEndOf="@+id/descriptionID"
+        app:layout_constraintTop_toBottomOf="@+id/nameAgentID"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/habilitiesID"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Abilities"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/habilitiesText"
+        app:layout_constraintStart_toStartOf="@+id/habilitiesText"
+        app:layout_constraintTop_toBottomOf="@+id/habilitiesText" />
+
+    <TextView
+        android:id="@+id/habilitiesText"
+        android:layout_width="107dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:background="#7CFFFEFE"
+        android:text="Abilities"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/RolText"
+        app:layout_constraintStart_toStartOf="@+id/RolText"
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionRolID" />
+
+    <TextView
+        android:id="@+id/DescriptionText"
+        android:layout_width="132dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#7CFFFEFE"
+        android:text="Description"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/nameAgentID"
+        app:layout_constraintStart_toStartOf="@+id/nameAgentID"
+        app:layout_constraintTop_toBottomOf="@+id/nameAgentID" />
+
+    <TextView
+        android:id="@+id/descriptionID"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="description"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/DescriptionText"
+        app:layout_constraintStart_toStartOf="@+id/DescriptionText"
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionText" />
+
+    <TextView
+        android:id="@+id/RolText"
+        android:layout_width="63dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="60dp"
+        android:background="#7CFFFEFE"
+        android:text="Rol"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/descriptionID"
+        app:layout_constraintTop_toBottomOf="@+id/nameAgentID" />
+
+    <TextView
+        android:id="@+id/rolTextViewID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Rol"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/RolText"
+        app:layout_constraintStart_toStartOf="@+id/RolText"
+        app:layout_constraintTop_toBottomOf="@+id/RolText" />
+
+    <TextView
+        android:id="@+id/DescriptionRolID"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="DescriptionRol"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/RolText"
+        app:layout_constraintStart_toStartOf="@+id/RolText"
+        app:layout_constraintTop_toBottomOf="@+id/rolTextViewID" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="onSaveButtonPressed"
+        android:text="SAVE"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/agentImageID"
+        app:layout_constraintStart_toStartOf="@+id/agentImageID"
+        app:layout_constraintTop_toBottomOf="@+id/agentImageID" />
+
+    <ProgressBar
+        android:id="@+id/progressBarAgent"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

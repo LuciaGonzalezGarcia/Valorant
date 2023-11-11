@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/valorantmaps"
+    tools:context=".searchMaps.SearchMapsActivity">
+
+    <ImageButton
+        android:id="@+id/arrowRightMapsID"
+        android:layout_width="81dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="10dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="Click to change"
+        android:onClick="onArrowButtonPressed"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toBottomOf="@+id/mapsTextID"
+        app:layout_constraintStart_toEndOf="@+id/mapsTextID"
+        app:layout_constraintTop_toTopOf="@+id/mapsTextID"
+        app:srcCompat="@drawable/arrowbutton" />
+
+    <ImageButton
+        android:id="@+id/arrowLeftMapsID"
+        android:layout_width="81dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="10dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="Click to change"
+        android:onClick="onArrowButtonPressed"
+        android:rotationY="-180"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toBottomOf="@+id/mapsTextID"
+        app:layout_constraintEnd_toStartOf="@+id/mapsTextID"
+        app:layout_constraintTop_toTopOf="@+id/mapsTextID"
+        app:srcCompat="@drawable/arrowbutton" />
+
+    <TextView
+        android:id="@+id/mapsTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MAPS"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewMaps" />
+
+    <ProgressBar
+        android:id="@+id/progressBarMapsID"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMaps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
